@@ -1,0 +1,13 @@
+[Unit]
+Description=VPN Service to location - %I
+After=network.target
+
+[Service]
+Type=forking
+User=root
+ExecStart=/etc/openvpn/etc/vpn.sh up %I
+ExecStop=/etc/openvpn/etc/vpn.sh down %I
+
+[Install]
+WantedBy=multi-user.target
+

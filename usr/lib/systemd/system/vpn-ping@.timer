@@ -1,0 +1,10 @@
+[Unit]
+Description=Run VPN ping test for location : %I
+After=network.target
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=5min
+
+[Install]
+WantedBy=timers.target

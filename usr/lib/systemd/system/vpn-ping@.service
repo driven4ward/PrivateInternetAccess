@@ -1,0 +1,7 @@
+[Unit]
+Description=VPN ping test for location : %I
+
+[Service]
+Type=simple
+User=root
+ExecStart=/etc/openvpn/pia/vpn-ping.sh 8.8.8.8 %I
