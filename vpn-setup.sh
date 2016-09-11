@@ -76,11 +76,13 @@ function vpn_copy_services() {
 
 function vpn_setup_passwd() {
     echo -n VPN Username: 
-    read -p vpn_username
+    read -s vpn_username
+    echo 
     echo -n VPN Password: 
     read -s vpn_password
+    echo 
     echo "$vpn_username
-#vpn_password
+$vpn_password
 " > "$INSTALL_DIR"/passwd
     chown root.root "$INSTALL_DIR"/passwd
     chmod 600       "$INSTALL_DIR"/passwd
