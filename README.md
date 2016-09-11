@@ -25,7 +25,7 @@ Requires=vpn@`<Country>`.service
 Type=simple  
 User=root  
 UMask=0007  
-ExecStart=/usr/bin/ip netns exec vpn-`<Country>` sudo -H -u <user> -g <group> bash -c 'umask 002;traceroute 8.8.8.8'  
+ExecStart=/usr/bin/ip netns exec vpn-`<Country>` sudo -H -u `<user>` -g `<group>` bash -c 'umask 002;traceroute 8.8.8.8'  
   
 [Install]  
 WantedBy=multi-user.target  
